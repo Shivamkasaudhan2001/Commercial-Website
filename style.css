@@ -102,6 +102,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 40;
+  -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   background: radial-gradient(circle at top, rgba(19, 54, 36, 0.9), rgba(2, 8, 6, 0.92));
   border-bottom: 1px solid rgba(212, 175, 55, 0.18);
@@ -277,7 +278,9 @@ body {
   position: absolute;
   inset: 0;
   background: radial-gradient(circle at top, rgba(0, 0, 0, 0.45), rgba(4, 17, 12, 0.94));
+  -webkit-backdrop-filter: blur(1px);
   backdrop-filter: blur(1px);
+  
 }
 
 .hero__content {
@@ -340,6 +343,7 @@ body {
   padding: 0.4rem 0.75rem;
   border-radius: 999px;
   background: rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(212, 175, 55, 0.3);
 }
