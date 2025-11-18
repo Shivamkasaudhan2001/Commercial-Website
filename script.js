@@ -64,3 +64,30 @@ const yearSpan = document.getElementById("year");
 if (yearSpan) {
   yearSpan.textContent = new Date().getFullYear();
 }
+
+// ========== Dynamic hero background (wallpaper templates) ==========
+const heroSection = document.querySelector(".hero");
+
+// Only run if hero exists on this page
+if (heroSection) {
+  // List of background images (use your own files / URLs)
+  const heroBackgrounds = [
+    "bg1/bg1.jpg",
+    "bg2/bg2.jpg",
+    "bg3/bg3.jpg",
+    "bg4/bg4.jpg",
+    // You can add more: "images/bg4.jpg",
+  ];
+
+  // Set initial background
+  let currentBgIndex = 0;
+  heroSection.style.backgroundImage = `url("${heroBackgrounds[currentBgIndex]}")`;
+
+  // Change background every 10 seconds (10000 ms)
+  const changeIntervalMs = 10000;
+
+  setInterval(() => {
+    currentBgIndex = (currentBgIndex + 1) % heroBackgrounds.length;
+    heroSection.style.backgroundImage = `url("${heroBackgrounds[currentBgIndex]}")`;
+  }, changeIntervalMs);
+}

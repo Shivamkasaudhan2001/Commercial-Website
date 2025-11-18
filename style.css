@@ -268,10 +268,14 @@ body {
   position: relative;
   min-height: 88vh;
   padding: 6.5rem 0 4.5rem;
-  background-image: url("https://images.pexels.com/photos/265947/pexels-photo-265947.jpeg?auto=compress&cs=tinysrgb&w=1600");
+  /* keep these for nice wallpaper behaviour */
   background-size: cover;
   background-position: center;
-  color: #fff;
+  background-repeat: no-repeat;
+  color: #ffffff;
+
+  /*....existing styles....*/
+  transition: background-image 0.8s ease-in-out, background 0.8s ease-in-out;
 }
 
 .hero__overlay {
